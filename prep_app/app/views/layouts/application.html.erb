@@ -12,7 +12,7 @@
   <nav>
     <ul>
       <% if current_user %>
-      <li><%= link_to "My Profile", current_user %></li>
+      <li><%= link_to "My Profile", root_path %></li>
       <li><%= link_to "Edit My Profile", edit_user_registration_path %></li>
       <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
       <% else %>
