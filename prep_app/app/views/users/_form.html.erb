@@ -1,0 +1,48 @@
+<%= form_for(@user) do |f| %>
+
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+      <%= f.label :first_name %><br />
+      <%= f.text_field :first_name, autofocus: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :second_name %><br />
+      <%= f.text_field :second_name %>
+    </div>
+
+    <div class="field">
+      <%= f.label :image %><br />
+      <%= f.text_field :image%>
+    </div>
+
+    <div class="field">
+      <%= f.label :role %><br />
+      <%= f.text_field :role %>
+    </div>
+
+    <div class="field">
+      <%= f.label :cohort_id %><br />
+      <%= f.collection_select(:cohort_id, Cohort.all, :id, :name) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %><br />
+      <%= f.email_field :email %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Submit" %>
+    </div>
+<% end %>
