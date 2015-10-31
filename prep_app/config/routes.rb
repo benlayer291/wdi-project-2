@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  root "devise/sessions#new"
+
+  root "users#show"
+
   devise_for :users
+  resources :users, only: [:show]
+  
 end
