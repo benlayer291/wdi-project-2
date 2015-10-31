@@ -1,6 +1,7 @@
-<h1>Edit<% @user.first_name + " " + @user.last_name %></h1>
+<h1>Edit<% @user.first_name + " " + @user.second_name %></h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Delete', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-<%= link_to 'Back', users_path %>
+<ul>
+  <li><%= link_to 'Back', users_path %><li>
+  <li><%= link_to 'Delete', @user, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+</ul>

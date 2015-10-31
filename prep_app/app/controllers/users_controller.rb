@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  # before_action :set_user, only: [:edit, :update, :destroy]
 
   #Get
   def index 
@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   #Get
   def show
+    @user = current_user
   end
 
   #Get
@@ -17,6 +18,7 @@ class UsersController < ApplicationController
 
   #Get
   def edit
+    @user = User.find(params[:id])
   end
 
   #Post

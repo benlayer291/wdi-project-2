@@ -1,17 +1,17 @@
 <%= form_for(@user) do |f| %>
 
-  <% if @post.errors.any? %>
+  <% if @user.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this post from being saved:</h2>
 
       <ul>
-      <% @post.errors.full_messages.each do |message| %>
+      <% @user.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
-  
+
   <div class="field">
       <%= f.label :first_name %><br />
       <%= f.text_field :first_name, autofocus: true %>
@@ -30,11 +30,6 @@
     <div class="field">
       <%= f.label :role %><br />
       <%= f.text_field :role %>
-    </div>
-
-    <div class="field">
-      <%= f.label :cohort_id %><br />
-      <%= f.collection_select(:cohort_id, Cohort.all, :id, :name) %>
     </div>
 
     <div class="field">
