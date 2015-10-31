@@ -8,6 +8,19 @@
 </head>
 <body>
 
+<header>
+  <nav>
+    <ul>
+      <% if current_user %>
+      <li><%= link_to "My Profile", root_path %></li>
+      <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+      <% else %>
+      <li><%= link_to "Login", new_user_session_path %></li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
+
 <% flash.each do |name, message| %>
   <div class="flash-message flash-message-<%= name %>">
     <%= message %>
