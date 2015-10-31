@@ -4,6 +4,31 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :first_name %><br />
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :second_name %><br />
+    <%= f.text_field :second_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.text_field :image%>
+  </div>
+
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.text_field :role %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cohort_id %><br />
+    <%= f.text_field :cohort_id %>
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
