@@ -10,14 +10,14 @@
 
 #currently by registering...
 
-# Cohort(id: integer, name: string, teacher_id: integer, created_at: datetime, updated_at: datetime)
+#  Cohort(id: integer, name: string, teacher_id: integer, created_at: datetime, updated_at: datetime, year_group: integer)
 
-c1 = Cohort.create!(name: 'SS-CH1', teacher_id: 2)
-c2 = Cohort.create!(name: 'SS-CH2', teacher_id: 2)
-c3 = Cohort.create!(name: 'SS-CH3', teacher_id: 2)
-c4 = Cohort.create!(name: 'SS-CH4', teacher_id: 2)
-c5 = Cohort.create!(name: 'SS-CH5', teacher_id: 2)
-c6 = Cohort.create!(name: 'SS-CH6', teacher_id: 2)
+c1 = Cohort.create!(name: 'SS-CH1', teacher_id: 1, year_group: 9)
+c2 = Cohort.create!(name: 'SS-CH2', teacher_id: 1, year_group: 9)
+c3 = Cohort.create!(name: 'SS-CH3', teacher_id: 1, year_group: 9)
+c4 = Cohort.create!(name: 'RM-CH1', teacher_id: 1, year_group: 10)
+c5 = Cohort.create!(name: 'RM-CH2', teacher_id: 1, year_group: 10)
+c6 = Cohort.create!(name: 'RM-CH3', teacher_id: 1, year_group: 10)
 
 #Resource(id: integer, name: string, description: text, image: string, file: string, cohort_id: integer)
 
