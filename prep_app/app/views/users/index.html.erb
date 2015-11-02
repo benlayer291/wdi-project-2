@@ -9,15 +9,10 @@
     </li>
   </ul>
   <ul>
-    <li><%= user.first_name %></li>
-    <li><%= user.second_name %></li>
+    <li><%= user.first_name + " " + user.second_name %></li>
     <li><%= user.role %></li>
   </ul>
   <ul>
     <li><%= link_to 'Edit', edit_user_path(user) %></li>
   </ul>
 <% end %>
-
-<ul>
-  <li><%= link_to 'New User', new_user_path %></li>
-</ul>

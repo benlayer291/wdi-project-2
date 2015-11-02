@@ -24,7 +24,7 @@
     <li><%= link_to 'All Resources', resources_path %></li>
   </ul>
 </div>
-
+<h2>My Resources</h2>
 <div class="user-resources">
   <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.name } %>
   <% @user_cohorts.each do |cohort| %>
