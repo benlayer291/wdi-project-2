@@ -9,6 +9,9 @@ Users
 has_many :cohorts_as_teacher, class_name: "User", foreign_key: "teacher_id"
 has_and_belongs_to_many :cohorts 
 
+has_many :assets, as: :attachable, dependent: :destroy
+has_many :cohorts, as: :teacher, class_name: "User", foreign_key: "teacher_id"
+
 Cohorts
 - name:string
 - teacher_id:integer
