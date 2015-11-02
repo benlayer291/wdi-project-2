@@ -12,7 +12,8 @@
 
   <ul>
     <h2>Classes</h2>
-    <% @user.cohorts.each do |cohort| %>
+    <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.name } %>
+    <% @user_cohorts.each do |cohort| %>
       <li><%= cohort.name %></li>
     <% end %>
   </ul>
