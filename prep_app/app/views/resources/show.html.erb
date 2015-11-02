@@ -1,2 +1,20 @@
-<h1>Resources</h1>
-<p>Find me in app/views/resources/show.html.erb</p>
+<h1><%= @resource.name %></h1>
+
+<ul>
+  <li><%= image_tag resource.image %></li>
+</ul>
+
+<ul>
+  <li><%= resource.name  %></li>
+  <li><%= resource.cohort %></li>
+</ul>
+
+<ul>
+  <li><%= resource.description %></li>
+</ul>
+
+<ul>
+  <li><%= link_to 'Edit', edit_resource_path(@resource) %></li>
+  <li><%= link_to 'All Resources', resources_path %></li>
+</ul>
+
