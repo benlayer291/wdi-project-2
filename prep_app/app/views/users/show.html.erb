@@ -1,20 +1,49 @@
 <h1><%= @user.first_name + " " + @user.second_name %></h1>
 
-<ul>
-  <li><%= image_tag @user.image  %></li>
-</ul>
+<div class="user-info">
+  <ul>
+    <li><%= image_tag @user.image  %></li>
+  </ul>
 
-<ul>
-  <li><%= @user.first_name + " " + @user.second_name %></li>
-  <li><%= @user.role %></li>
-</ul>
+  <ul>
+    <li><%= @user.first_name + " " + @user.second_name %></li>
+    <li><%= @user.role %></li>
+  </ul>
 
-<ul>
-  <li><%= link_to 'Edit', edit_user_path(@user) %></li>
-</ul>
+  <ul>
+    <h2>Classes</h2>
+    <% @user.cohorts.each do |cohort| %>
+      <li><%= cohort.name %></li>
+    <% end %>
+  </ul>
 
-<ul>
-  <li><%= link_to "All Users", users_path %></li>
-  <li><%= link_to 'All Classes', cohorts_path %></li>
-  <li><%= link_to 'All Resources', resources_path %></li>
-</ul>
+  <ul>
+    <li><%= link_to "All Users", users_path %></li>
+    <li><%= link_to 'All Classes', cohorts_path %></li>
+    <li><%= link_to 'All Resources', resources_path %></li>
+  </ul>
+</div>
+
+<div class="user-resources">
+  <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.name } %>
+  <% @user_cohorts.each do |cohort| %>
+    <ul>
+      <li><%= cohort.name %></li>
+    </ul>
+
+    <% cohort.resources.each do |resource| %>
+      <ul>
+        <li>
+          <%= link_to resource do %>
+            <%= image_tag resource.image %>
+          <% end %>
+        </li>
+      </ul>
+
+      <ul>
+        <li><%= resource.name  %></li>
+      </ul>
+    <% end %>
+
+  <% end %>
+</div>

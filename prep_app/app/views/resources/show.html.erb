@@ -1,16 +1,16 @@
 <h1><%= @resource.name %></h1>
 
 <ul>
-  <li><%= image_tag resource.image %></li>
+  <li><%= image_tag @resource.image %></li>
 </ul>
 
 <ul>
-  <li><%= resource.name  %></li>
-  <li><%= resource.cohort %></li>
+  <li><%= @resource.name  %></li>
+  <li><%= @resource.cohort.name %></li>
 </ul>
 
 <ul>
-  <li><%= resource.description %></li>
+  <li><%= @resource.description %></li>
 </ul>
 
 <ul>
