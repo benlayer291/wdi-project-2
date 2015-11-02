@@ -1,4 +1,17 @@
-<h1>Cohorts#index</h1>
+<h1>Cohorts</h1>
+
+<% @cohorts.each do |cohort| %>
+  <ul>
+    <li><%= link_to cohort.name, cohort_path  %></li>
+  </ul>
+  <ul>
+    <li><%= cohort.teacher %></li>
+  </ul>
+  <ul>
+    <li><%= link_to 'Edit', edit_cohort_path(cohort) %></li>
+  </ul>
+<% end %>
+
 
 
 <ul>

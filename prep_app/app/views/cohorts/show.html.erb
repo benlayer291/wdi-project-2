@@ -1,2 +1,14 @@
-<h1>Cohorts#show</h1>
-<p>Find me in app/views/cohorts/show.html.erb</p>
+<h1><%= @cohort.name %></h1>
+
+<ul>
+  <li><%= @cohort.name  %></li>
+</ul>
+
+<ul>
+  <li><%= @cohort.teacher %></li>
+</ul>
+
+<ul>
+  <li><%= link_to 'Edit', edit_cohort_path(@cohort) %></li>
+  <li><%= link_to 'All Cohorts', cohorts_path %></li>
+</ul>
