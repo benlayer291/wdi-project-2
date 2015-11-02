@@ -1,2 +1,8 @@
-<h1>Resources#edit</h1>
-<p>Find me in app/views/resources/edit.html.erb</p>
+<h1>Edit<%= @resource.name</h1>
+
+<%= render 'form' %>
+
+<ul>
+  <li><%= link_to 'Back', resources_path %></li>
+  <li><%= link_to 'Delete', @resource, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+</ul>
