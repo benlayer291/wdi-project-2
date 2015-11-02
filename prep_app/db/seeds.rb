@@ -29,13 +29,13 @@ r5 = c5.resources.create!(name: 'Homework 5', description: 'Complete all questio
 r6 = c6.resources.create!(name: 'Homework 6', description: 'Complete all questions on the worksheet. Write your name and the date at the top of the page. You will need to draw a graph for question 3 which you should do using a pencil and ruler on graph paper', image: 'http://www.stmarysrcmidd.rochdale.sch.uk/files/images/keep-calm-and-do-that-homework.png', file: "file path")
 
 #Setup user cohorts
-User.find(1).cohorts << c1
-User.find(2).cohorts << c1 
-User.find(2).cohorts << c2 
-User.find(2).cohorts << c3 
-User.find(2).cohorts << c4 
-User.find(2).cohorts << c5 
-User.find(2).cohorts << c6 
+User.find(2).cohorts << c1
+User.find(1).cohorts << c1 
+User.find(1).cohorts << c2 
+User.find(1).cohorts << c3 
+User.find(1).cohorts << c4 
+User.find(1).cohorts << c5 
+User.find(1).cohorts << c6 
 
 
 
