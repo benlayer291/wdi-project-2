@@ -12,6 +12,7 @@ has_and_belongs_to_many :cohorts
 Cohorts
 - name:string
 - teacher_id:integer
+- year_group:integer
 
 has_many_and_belongs_to :users
 belongs_to :teacher, class_name: "User", foreign_key: "teacher_id"
