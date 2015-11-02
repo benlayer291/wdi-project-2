@@ -2,6 +2,11 @@
 
 <ul>
   <li><%= image_tag @resource.image %></li>
+  <li>
+    <%= link_to @resource.file.url do %>
+        <%= image_tag("http://fillmurray.com/300/300") %>
+      <% end %>
+  </li>
 </ul>
 
 <ul>
