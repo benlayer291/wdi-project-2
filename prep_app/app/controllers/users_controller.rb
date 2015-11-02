@@ -47,13 +47,13 @@ class UsersController < ApplicationController
     redirect_to users_path
   end
 
-  def set_post
+  def set_user
     @user = User.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:first_name, :second_name, :role, :cohort_id, :image, :email, :password, :password_confirmation)
+    params.require(:user).permit(:first_name, :second_name, :role, :image, :email, :password, :password_confirmation)
   end
 
 end
