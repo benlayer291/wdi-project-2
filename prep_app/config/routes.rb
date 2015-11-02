@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :users
   resources :cohorts
   resources :resources
+  resources :comments, only: [:create, :destroy]
 
   authenticated :user do
     root "users#show", as: :authenticated_root

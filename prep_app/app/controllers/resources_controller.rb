@@ -6,6 +6,7 @@ class ResourcesController < ApplicationController
   end
 
   def show
+    @comments = @resource.comments
   end
 
   def new
