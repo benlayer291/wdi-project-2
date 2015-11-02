@@ -11,8 +11,8 @@
       <% end %>
     </li>
     <li>
-      <%= link_to resource.file.url do %>
-          <%= image_tag("http://fillmurray.com/300/300") %>
+      <%= link_to resource do %>
+          <%= image_tag(resource.file.thumb.url) %>
         <% end %>
     </li>
   </ul>
