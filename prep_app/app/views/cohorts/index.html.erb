@@ -5,15 +5,7 @@
   <ul>
     <li><%= link_to cohort.name, cohort  %></li>
   </ul>
-  <ul>
-    <li><%= cohort.teacher.first_name + " " + cohort.teacher.second_name  %></li>
-  </ul>
-  <ul>
-    <li><%= link_to 'Edit', edit_cohort_path(cohort) %></li>
-  </ul>
 <% end %>
-
-
 
 <ul>
   <li><%= link_to 'New Cohort', new_cohort_path %></li>

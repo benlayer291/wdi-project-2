@@ -7,12 +7,7 @@
   <ul>
     <li>
       <%= link_to resource do %>
-        <%= image_tag resource.image %>
-      <% end %>
-    </li>
-    <li>
-      <%= link_to resource do %>
-          <%= image_tag resource.file.thumb.url %>
+          <%= image_tag resource.file.url %>
         <% end %>
     </li>
   </ul>
@@ -26,8 +21,6 @@
   </ul>
 
 <% end %>
-
-
 
 <ul>
   <li><%= link_to 'New Resource', new_resource_path %></li>

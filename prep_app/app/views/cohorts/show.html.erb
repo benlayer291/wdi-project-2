@@ -1,11 +1,22 @@
 <h1><%= @cohort.name %></h1>
 
 <ul>
-  <li><%= @cohort.name  %></li>
+  <li>Teacher:<%= " " + @cohort.teacher.first_name + " " + @cohort.teacher.second_name %></li>
 </ul>
 
 <ul>
-  <li>Teacher:<%= " " + @cohort.teacher.first_name + " " + @cohort.teacher.second_name %></li>
+  <% @cohort.resources.each do |resource| %>
+    <ul>
+      <li>
+        <%= link_to resource do %>
+          <%= image_tag resource.file.url %>
+        <% end %>
+      </li>
+    </ul>
+    <ul>
+      <li><%= resource.name  %></li>
+    </ul>
+  <% end %>
 </ul>
 
 <ul>
