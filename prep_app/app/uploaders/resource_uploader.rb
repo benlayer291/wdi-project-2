@@ -38,7 +38,6 @@ class ResourceUploader < CarrierWave::Uploader::Base
   end
   version :detail do
     process :resize_to_fit => [400, 400]
-    process :convert => 'png'
   end
 
 

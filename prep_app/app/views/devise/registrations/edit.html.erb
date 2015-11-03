@@ -20,7 +20,7 @@
 
   <div class="field">
     <%= f.label :role %><br />
-    <%= f.text_field :role %>
+    <%= f.collection_select(:role, User.uniq, :role, :role) %>
   </div>
 
   <div class="field">

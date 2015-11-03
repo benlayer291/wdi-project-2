@@ -19,7 +19,7 @@
 
     <div class="field">
       <%= f.label :teacher_id %><br />
-      <%= f.collection_select(:teacher_id, User.where(role: "Teacher"), :id, :first_name) %>
+      <%= f.collection_select(:teacher_id, User.where(role: "Teacher"), :id, :second_name) %>
     </div>
 
     <div class="actions">

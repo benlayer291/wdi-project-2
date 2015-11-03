@@ -1,6 +1,7 @@
 <h1>Classes</h1>
 
-<% @cohorts.each do |cohort| %>
+<% @ordered_cohorts = @cohorts.sort_by { |obj| obj.year_group } %>
+<% @ordered_cohorts.each do |cohort| %>
   <ul>
     <li><%= link_to cohort.name, cohort  %></li>
   </ul>
