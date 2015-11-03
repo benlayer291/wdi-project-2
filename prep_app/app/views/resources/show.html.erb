@@ -3,13 +3,12 @@
 <ul>
   <li>
     <%= link_to @resource.file.url do %>
-        <%= image_tag @resource.file.url %>
+        <%= image_tag @resource.file.thumb.url %>
       <% end %>
   </li>
 </ul>
 
 <ul>
-  <li><%= @resource.name  %></li>
   <li><%= @resource.cohort.name %></li>
 </ul>
 

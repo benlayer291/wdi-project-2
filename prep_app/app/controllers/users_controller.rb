@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  # before_action :set_user, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
+  load_and_authorize_resource
 
   #Get
   def index 
@@ -45,10 +46,6 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     redirect_to users_path
-  end
-
-  def set_user
-    @user = User.find(params[:id])
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
