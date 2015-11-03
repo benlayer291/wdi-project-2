@@ -1,43 +1,34 @@
-<div class="row">
+<div class="row user-info">
   <div class="small-4 columns">
-    <ul>
-      <li><%= image_tag @user.image  %></li>
-    </ul>
-  </div>
-  <div class="small-8 columns">
-    <ul>
-      <li><%= @user.first_name + " " + @user.second_name %></li>
-      <li><%= @user.role %></li>
-    </ul>
-    <ul>
-      <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.year_group } %>
-      <% @user_cohorts.each do |cohort| %>
-        <li><%= cohort.name %></li>
-      <% end %>
-    </ul>
+    <div class="profile-picture">
+      <ul>
+        <li><%= image_tag @user.image, class: "radius"  %></li>
+      </ul>
+    </div>
   </div>
 </div>
-
-
-<h1><%= @user.first_name + " " + @user.second_name %></h1>
-
-<div class="user-info">
-  <ul>
-    <li><%= image_tag @user.image  %></li>
-  </ul>
-
-  <ul>
-    <li><%= @user.first_name + " " + @user.second_name %></li>
-    <li><%= @user.role %></li>
-  </ul>
-
-  <ul>
-    <h2>Classes</h2>
-    <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.year_group } %>
-    <% @user_cohorts.each do |cohort| %>
-      <li><%= cohort.name %></li>
-    <% end %>
-  </ul>
+  <div class="small-8 columns">
+    <div class="profile-name">
+      <ul>
+        <li><h2><%= @user.first_name + " " + @user.second_name %></h2></li>
+        <li><%= link_to "Edit My Profile", edit_user_registration_path %></li>
+      </ul>
+    </div>
+    <div class="profile-role">
+      <ul>
+        <li><h3><%= @user.role %></h3></li>
+      </ul>
+    </div>
+    <div class="profile-classes">
+      <ul>
+        <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.year_group } %>
+        <% @user_cohorts.each do |cohort| %>
+          <li><%= cohort.name %></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
 
   <ul>
     <li><%= link_to "All Users", users_path %></li>

@@ -2,32 +2,73 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
-// main {
-//   margin:0 auto;
-//   padding: 0;
-//   max-width: 960px;
-//   text-align: center;
+.user-info {
+  height: 300px;
+  .columns {
+    height: 300px;
+  }
+  li {
+    list-style-type: none;
+    display: inline-block;
+  }
+  .profile-picture{
+    height:300px;
+    ul {
+      height:300px;
+      margin: 0;
+      padding: 0;
+      li {
+        
+        img {
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+  .profile-name {
+    height: 60px;
+    ul {
+      height: 60px;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        h2 {
+          margin: 0;
+          padding: 0;
+        }
+        a {
 
-//   h1 {
-//     margin: 0 auto;
-//   }
+        }
+      }
+    }
+  }
+  .profile-role {
+    height: 60px;
+    ul {
+      height: 60px;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+        h3 {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  .profile-classes {
+    height: 180px;
+    ul {
+      height: 180px;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline-block;
+      }
+    }
+  }
+}
 
-//   ul {
-//     margin:0 auto;
-//     padding: 0;
-//     max-width: 960px;
-//     text-align: center;
-
-//     li {
-//       display: inline-block;
-//       margin-left: 15px;
-
-//       // img {
-//       //   height: 300px;
-//       //   width: 300px;
-//       //   border:none;
-//       //   border-radius: 100%;
-//       // }
-//     }
-//   }
-// }
+  
