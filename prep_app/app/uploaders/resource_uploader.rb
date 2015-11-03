@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 class ResourceUploader < CarrierWave::Uploader::Base
+  # require 'carrierwave/processing/mini_magick'
 
   # Include RMagick or MiniMagick support:
   include CarrierWave::RMagick
@@ -33,14 +34,25 @@ class ResourceUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
 
-  version :thumb do
-    process :resize_to_fill => [100, 100]
-  end
+  # version :thumb do
+  #   process :resize_to_fill => [100, 100]
+  # end
 
   version :detail do
     process :resize_to_fit => [400, 400]
   end
 
+  def cover 
+    manipulate! do |frame, index|
+      frame if index.zero?
+    end
+  end
+
+  version :thumb do
+    process :cover    
+    process :resize_to_fill => [200, 200, Magick::NorthGravity]
+    process :convert => 'png'
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
