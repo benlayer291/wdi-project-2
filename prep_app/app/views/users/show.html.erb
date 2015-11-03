@@ -6,7 +6,7 @@
     <div class="profile-name">
       <ul>
         <li><h2><%= @user.first_name + " " + @user.second_name %></h2></li>
-        <li><%= link_to "Edit My Profile", edit_user_registration_path, class: "button" %></li>
+        <li><%= link_to "Edit My Profile", edit_user_registration_path %></li>
       </ul>
     </div>
     <div class="profile-role">
@@ -18,7 +18,7 @@
       <ul>
         <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.year_group } %>
         <% @user_cohorts.each do |cohort| %>
-          <li><%= cohort.name %></li>
+        <li><%= cohort.name %></li>
         <% end %>
       </ul>
     </div>
@@ -36,24 +36,22 @@
 <div class="user-resources">
   <h2>My Resources</h2>
   <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.year_group } %>
-  <% @user_cohorts.each do |cohort| %>
-    <!-- <ul>
+
+    <% @user_cohorts.each do |cohort| %>
+    <div class="row">
+    <ul>
       <li><%= cohort.name %></li>
-    </ul> -->
+    </ul> 
 
-    <% cohort.resources.each do |resource| %>
-      <ul>
-        <li>
-          <%= link_to resource do %>
-            <%= image_tag resource.file.thumb.url %>
-          <% end %>
-        </li>
-      </ul>
-
+      <% cohort.resources.each do |resource| %>
+        <%= link_to resource do %>
+        <div class="large-4 columns resource-tile"></div>
+        <% end %>
       <!-- <ul>
         <li><%= resource.name  %></li>
       </ul> -->
     <% end %>
+    </div>
+    <% end %>
 
-  <% end %>
-</div>
+  </div>
