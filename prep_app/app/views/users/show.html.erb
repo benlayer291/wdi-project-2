@@ -1,3 +1,24 @@
+<div class="row">
+  <div class="small-4 columns">
+    <ul>
+      <li><%= image_tag @user.image  %></li>
+    </ul>
+  </div>
+  <div class="small-8 columns">
+    <ul>
+      <li><%= @user.first_name + " " + @user.second_name %></li>
+      <li><%= @user.role %></li>
+    </ul>
+    <ul>
+      <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.year_group } %>
+      <% @user_cohorts.each do |cohort| %>
+        <li><%= cohort.name %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+
+
 <h1><%= @user.first_name + " " + @user.second_name %></h1>
 
 <div class="user-info">
