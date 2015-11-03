@@ -19,8 +19,9 @@
       <%= message %>
     </div>
   <% end %>
-
-  <header>
+  
+  <%= render 'header' %>
+  <!-- <header>
     <nav>
       <ul>
         <% if current_user %>
@@ -33,7 +34,7 @@
         <% end %>
       </ul>
     </nav>
-  </header>
+  </header> -->
 
   <main>
     <%= yield %>
