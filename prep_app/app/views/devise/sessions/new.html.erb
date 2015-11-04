@@ -1,17 +1,6 @@
-<!-- <div class="form-title">
+<div class="small-12 medium-12 large-6 large-offset-3 columns">
   <h2>Log in</h2>
-</div> -->
 
-<div class="row form">
-  <div class="small-6 columns">
-    <h2>Log in</h2>
-    <!-- <ul>
-      <li><img src=""></li>
-      <li><img src=""></li>
-      <li><img src=""></li>
-    </ul> -->
-  </div>
-  <div class="small-6 columns">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
       <%= f.label :email %><br />
@@ -35,7 +24,7 @@
     </div>
     <% end %>
 
-    <%= render "devise/shared/links" %>
-  </div>
+   <!--  <%= render "devise/shared/links" %> -->
+
 </div>
 
