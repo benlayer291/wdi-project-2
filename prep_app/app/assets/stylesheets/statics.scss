@@ -24,3 +24,12 @@ main {
   margin-top: 20px;
 }
 
+a {
+  text-decoration: none;
+  color: $dark_grey;
+}
+
+a:hover {
+  color: $bright_blue;
+}
+

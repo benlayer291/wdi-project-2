@@ -1,7 +1,12 @@
+<div class="row comment-box">
 <%= form_for(:comment, url: comments_path(commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id)) do |f| %>
 
 <!--   <%= f.text_area :title, placeholder: "Add a title" %> -->
+<div class="small-4 columns"></div>
+<div class="small-8 columns">
   <%= f.text_area :comment, placeholder: "Write a Comment" %>
-  <%= f.submit "Comment!" %>
+  <%= f.submit "Comment!", class: "button expand" %>
+</div>
 
 <% end %>
+</div>

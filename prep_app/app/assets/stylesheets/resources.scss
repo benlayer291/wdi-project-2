@@ -1,3 +1,41 @@
-// Place all the styles related to the resources controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.resource {
+  margin: 50px 0;
+  height: 200px;
+  overflow: hidden;
+
+  .resource-pic {
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+      background-position: center;
+      width: 200px;
+    }
+
+  }
+
+  .resource-info {
+    margin: auto 0;
+
+    .resource-name {
+
+      h2 {
+        display: inline-block;
+        margin: 0;
+      }
+
+      a {
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+    }
+
+    .resource-cohort {
+      h3 {
+        display: inline-block;
+        margin: 0;
+      }
+    }
+  }
+}
