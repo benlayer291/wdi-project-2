@@ -8,6 +8,11 @@ header {
   background: #FF9300; // $dark_blue;
 }
 
+header .top-bar .name h1 a {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
 nav {
     max-width:960px;
     margin: 0 auto;
