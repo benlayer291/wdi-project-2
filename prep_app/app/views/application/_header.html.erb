@@ -9,14 +9,24 @@
     <section class="top-bar-section">
       <ul class="right">
         <% if current_user %>
+          <li><%= link_to "Feed", resources_path %></li>
           <li class="has-dropdown">
           <li><%= link_to "My Profile", root_path %></li>
           <li class="has-dropdown">
-            <%= link_to "Manage Content" %>
+            <a href="#">My Classes</a>
             <ul class="dropdown">
-              <li><%= link_to "All Users", users_path %></li>
-              <li><%= link_to "All Cohorts", cohorts_path %></li>
-              <li><%= link_to "All Resources", resources_path %></li>
+              <% @user_cohorts = current_user.cohorts.sort_by { |obj| obj.year_group } %>
+              <% @user_cohorts.each do |cohort| %>
+                <li><%= link_to cohort.name, cohort  %></li>
+              <% end %>
+            </ul>
+          </div>
+          <li class="has-dropdown">
+            <%= link_to "Browse" %>
+            <ul class="dropdown">
+              <li><%= link_to "Users", users_path %></li>
+              <li><%= link_to "Cohorts", cohorts_path %></li>
+              <li><%= link_to "Resources", resources_path %></li>
             </ul>
           </li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>

@@ -1,0 +1,27 @@
+<%= link_to resource do %>
+<div class="small-6 medium-6 large-4 columns resource-tile">
+  <%=image_tag resource.image %> # image_tag resource.file.thumb.url %>
+</div>
+<% end %>
+
+<% if false %>
+<ul>
+  <li><%= resource.cohort.name %></li>
+  <li><%#= resource.created_at %></li>
+</ul>
+<ul>
+  <li>
+    <%= link_to resource do %>
+        <%= image_tag resource.file.url %>
+      <% end %>
+  </li>
+</ul>
+
+<ul>
+  <li><%= resource.name  %></li>
+</ul>
+
+<ul>
+  <li><%= link_to 'Edit', edit_resource_path(resource) %></li>
+</ul>
+<% end %>

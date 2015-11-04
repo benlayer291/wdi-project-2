@@ -3,4 +3,6 @@ class Resource < ActiveRecord::Base
   
   belongs_to :cohort
   mount_uploader :file, ResourceUploader
+
+  scope :latest, -> { order("created_at DESC") }
 end

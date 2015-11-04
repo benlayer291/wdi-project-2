@@ -5,18 +5,7 @@
 </ul>
 
 <ul>
-  <% @cohort.resources.each do |resource| %>
-    <ul>
-      <li>
-        <%= link_to resource do %>
-          <%= image_tag resource.file.url %>
-        <% end %>
-      </li>
-    </ul>
-    <ul>
-      <li><%= resource.name  %></li>
-    </ul>
-  <% end %>
+  <%= render @cohort.resources %>
 </ul>
 
 <ul>

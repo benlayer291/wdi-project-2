@@ -1,26 +1,7 @@
 <h1>Resources</h1>
 <% @resources_by_year_group = @resources.sort_by { |obj| obj.cohort.year_group } %>
-<% @resources_by_year_group.each do |resource| %>
-  <ul>
-    <li><%= resource.cohort.name %></li>
-  </ul>
-  <ul>
-    <li>
-      <%= link_to resource do %>
-          <%= image_tag resource.file.url %>
-        <% end %>
-    </li>
-  </ul>
 
-  <ul>
-    <li><%= resource.name  %></li>
-  </ul>
-
-  <ul>
-    <li><%= link_to 'Edit', edit_resource_path(resource) %></li>
-  </ul>
-
-<% end %>
+<%= render @resources_by_year_group %>
 
 <ul>
   <li><%= link_to 'New Resource', new_resource_path %></li>
