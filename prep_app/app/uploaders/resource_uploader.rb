@@ -50,7 +50,7 @@ class ResourceUploader < CarrierWave::Uploader::Base
 
   version :thumb do
     process :cover    
-    process :resize_to_fill => [200, 200, Magick::NorthGravity]
+    process :resize_to_fill => [300, 300, Magick::NorthGravity]
     process :convert => 'png'
   end
 

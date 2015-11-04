@@ -39,18 +39,20 @@
 
     <% @user_cohorts.each do |cohort| %>
     <div class="row">
-    <ul>
-      <li><%= cohort.name %></li>
-    </ul> 
+      <ul>
+        <li><%= cohort.name %></li>
+      </ul> 
 
       <% cohort.resources.each do |resource| %>
         <%= link_to resource do %>
-        <div class="large-4 columns resource-tile"></div>
+        <div class="small-4 columns resource-tile">
+          <%= image_tag resource.file.thumb.url %>
+        </div>
         <% end %>
       <!-- <ul>
         <li><%= resource.name  %></li>
       </ul> -->
-    <% end %>
+      <% end %>
     </div>
     <% end %>
 
