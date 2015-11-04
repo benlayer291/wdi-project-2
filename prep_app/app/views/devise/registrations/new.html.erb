@@ -20,7 +20,7 @@
 
   <div class="field">
     <%= f.label :role %><br />
-    <%= f.collection_select(:role, User::ROLES, :to_s, lambda{|i| i.to_s.humanize}) %>
+    <%= f.select :role, ["Teacher", "Student"] %>
   </div>
 
   <div class="field">

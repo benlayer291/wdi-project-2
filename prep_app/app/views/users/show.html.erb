@@ -1,5 +1,6 @@
 <div class="row user-info">
   <div class="small-4 large-4 columns profile-pic">
+    <!-- <div class="img" style="background:url(<%= @user.image %>)"></div> -->
     <%= image_tag @user.image %>
   </div>
   <div class="small-8 large-8 columns profile-info">
@@ -24,17 +25,19 @@
 <div class="user-resources">
   <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.year_group } %>
   <% @user_cohorts.each do |cohort| %>
-    <div class="row class-info">
-      <div class="large-4 columns"
-      <ul>
+    <div>
+      <h4><%= cohort.name %></h4>
+      <%= link_to "Add new", new_resource_path %>
+    </div>
+      <!-- <ul>
         <li><%= cohort.name %></li>
         <li><%= link_to "Add new", new_resource_path %></li>
       </ul> 
-    </div>
+    </div> -->
     <div class="row class-resources">
       <% cohort.resources.each do |resource| %>
         <%= link_to resource do %>
-        <div class="small-6 medium-4 large-4 columns resource-tile">
+        <div class="small-6 medium-6 large-4 columns resource-tile">
           <%=image_tag resource.image %> # image_tag resource.file.thumb.url %>
         </div>
         <% end %>
