@@ -10,16 +10,20 @@
       <h3><%= current_user.role %></h3>
     </div>
     <div class="user-class">
-      <ul>
-        <% @user_cohorts = current_user.cohorts.sort_by { |obj| obj.year_group } %>
-        <% @user_cohorts.each do |cohort| %>
-          <% if current_user.role == "Teacher" %>
-            <li><%= link_to cohort.name, cohort  %></li>
-          <% else %>
-            <li><%= cohort.name %></li>
+      <div class="row">
+        <ul>
+          <% @user_cohorts = current_user.cohorts.sort_by { |obj| obj.year_group } %>
+          <% @user_cohorts.each do |cohort| %>
+            <div class="small-4 columns">
+            <% if current_user.role == "Teacher" %>
+              <li><%= link_to cohort.name, cohort  %></li>
+            <% else %>
+              <li><%= cohort.name %></li>
+            <% end %>
+            </div>
           <% end %>
-        <% end %>
-      </ul>
+        </ul>
+      </div>
     </div>
     <div class="user-email">
       <%= current_user.email %>

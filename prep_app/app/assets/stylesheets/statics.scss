@@ -1,11 +1,11 @@
 body {
   font-family: 'Lato', sans-serif;
-  background: #FAFAFA;
+  background: $light_grey;
 }
 
 header {
   width: 100%;
-  background: #FF9300; // $dark_blue;
+  background: $orange; // $dark_blue;
 }
 
 header .top-bar .name h1 a {
