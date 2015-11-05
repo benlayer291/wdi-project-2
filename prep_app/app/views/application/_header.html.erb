@@ -1,8 +1,11 @@
 <header>
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
+<!--       <li><%= image_tag "prep.png" %><li> -->
       <li class="name">
-        <h1><%= link_to "PREP", root_path %></h1>
+        <%= link_to root_path do %>
+          <%= image_tag "prep-full-1.png" %>
+        <% end %>
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span><span></a></li>
     </ul>
@@ -10,12 +13,11 @@
       <ul class="right">
         <% if current_user %>
           <li><%= link_to "My Profile", root_path %></li>
-          <!-- <li class="has-dropdown"> -->
           <% if current_user.role == "Student" %>
-          <li><%= link_to "Feed", resources_path %></li>
+            <li><%= link_to "Feed", resources_path %></li>
           <% else %>
-          <li class="has-dropdown">
-            <a href="#">My Classes</a>
+            <li class="has-dropdown">
+              <a href="#">My Classes</a>
             <ul class="dropdown">
               <% @user_cohorts = current_user.cohorts.sort_by { |obj| obj.year_group } %>
               <% @user_cohorts.each do |cohort| %>
@@ -28,6 +30,7 @@
             <ul class="dropdown">
               <li><%= link_to "Users", users_path %></li>
               <li><%= link_to "Classes", cohorts_path %></li>
+              <li><%= link_to "Resources", resources_path %></li>
             </ul>
           </li>
           <% end %>
@@ -36,7 +39,10 @@
           <li><%= link_to "Register", new_user_registration_path %></li>
           <li><%= link_to "Login", new_user_session_path %></li>
         <% end %>
-      </ul>      
+      </ul> 
+      <!-- <ul class="left">
+            <li><h1><%= link_to "PREP", root_path %></h1></li>
+          </ul>   -->   
     </section>
   </nav>
 </header>
