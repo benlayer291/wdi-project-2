@@ -14,13 +14,13 @@
         <ul>
           <% @user_cohorts = current_user.cohorts.sort_by { |obj| obj.year_group } %>
           <% @user_cohorts.each do |cohort| %>
-            <div class="small-4 columns">
+            <!-- <div class="small-4 columns"> -->
             <% if current_user.role == "Teacher" %>
               <li><%= link_to cohort.name, cohort  %></li>
             <% else %>
               <li><%= cohort.name %></li>
             <% end %>
-            </div>
+            <!-- </div> -->
           <% end %>
         </ul>
       </div>

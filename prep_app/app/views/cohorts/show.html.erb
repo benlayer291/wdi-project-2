@@ -2,11 +2,9 @@
 <%= link_to 'Edit Class', edit_cohort_path(@cohort) %>
 <%= link_to 'Add New Resource', new_resource_path %>
 
-<ul>
-  <li>Teacher:<%= " " + @cohort.teacher.first_name + " " + @cohort.teacher.second_name %></li>
-</ul>
+<%= "Teacher: " + @cohort.teacher.first_name + " " + @cohort.teacher.second_name %>
 
-<ul>
-  <%= render @cohort.resources %>
-</ul>
+<div>
+<%= render @cohort.resources %>
+</div>
 

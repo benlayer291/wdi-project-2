@@ -1,5 +1,4 @@
-
-<div class="small-6 medium-6 large-4 columns resource-tile">
+<div class="small-12 medium-4 large-3 columns resource-tile">
   <div class="resource-title">
     <%= resource.name %>
   </div>
@@ -12,35 +11,3 @@
   <% end %>
   </div>
 </div>
-
-
-
-<% if false %>
-
-<%= link_to resource do %>
-<div class="small-6 medium-6 large-4 columns resource-tile">
-  <%= time_ago_in_words(resource.created_at) %>
-  <%= link_to image_tag resource.file.thumb.url, resource %>
-</div>
-<% end %>
-
-<ul>
-  <li><%= resource.cohort.name %></li>
-  <li><%= resource.created_at %></li>
-</ul>
-<ul>
-  <li>
-    <%= link_to resource do %>
-        <%= image_tag resource.file.thumb.url %>
-      <% end %>
-  </li>
-</ul>
-
-<ul>
-  <li><%= resource.name  %></li>
-</ul>
-
-<ul>
-  <li><%= link_to 'Edit', edit_resource_path(resource) %></li>
-</ul>
-<% end %>
