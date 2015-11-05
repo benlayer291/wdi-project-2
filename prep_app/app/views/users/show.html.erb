@@ -38,7 +38,7 @@
       <% cohort.resources.each do |resource| %>
         <%= link_to resource do %>
         <div class="small-6 medium-6 large-4 columns resource-tile">
-          <%=image_tag resource.image %> # image_tag resource.file.thumb.url %>
+          <%= image_tag resource.file.thumb.url %>
         </div>
         <% end %>
       <% end %>

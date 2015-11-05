@@ -6,7 +6,8 @@ class Ability
       else 
         can :show, User
         can :edit, User
-        can :show, Resource
+        can :read, Cohort
+        can :read, Resource
       end
     #
     # The first argument to `can` is the action you are giving the user

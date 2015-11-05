@@ -4,8 +4,8 @@ class ResourcesController < ApplicationController
   load_and_authorize_resource
 
   def index
-    # @resources = Resource.latest
-    @resources = Resource.all
+    @resources = Resource.latest
+    #@resources = Resource.all
   end
 
   def show

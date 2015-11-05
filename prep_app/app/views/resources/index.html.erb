@@ -1,12 +1,14 @@
-<h1>Resources</h1>
-<% @resources_by_year_group = @resources.sort_by { |obj| obj.cohort.year_group } %>
+<h1>My Homeworks</h1>
+<h2><%= current_user.first_name + " " + current_user.second_name %></h2>
+<h4><%= current_user.role + " - " + "#{current_user.cohorts.map(&:name).join}" %></h4>
 
-<%= render @resources_by_year_group %>
-
-<ul>
-  <li><%= link_to 'New Resource', new_resource_path %></li>
-</ul>
-
-
-
-
+<div class="user-resources">
+  <% @user_cohorts = current_user.cohorts.sort_by { |obj| obj.year_group } %>
+  <% @user_cohorts.each do |cohort| %>
+    <div class="row class-resources">
+      <% cohort.resources.each do |resource| %>
+        <%= render resource %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
