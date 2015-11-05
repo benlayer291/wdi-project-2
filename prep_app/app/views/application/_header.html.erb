@@ -9,9 +9,9 @@
     <section class="top-bar-section">
       <ul class="right">
         <% if current_user %>
-          <li><%= link_to "Feed", resources_path %></li>
-          <li class="has-dropdown">
           <li><%= link_to "My Profile", root_path %></li>
+          <!-- <li class="has-dropdown"> -->
+          <li><%= link_to "Feed", resources_path %></li>
           <li class="has-dropdown">
             <a href="#">My Classes</a>
             <ul class="dropdown">
