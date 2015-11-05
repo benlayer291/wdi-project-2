@@ -7,7 +7,9 @@
   <div class="small-12 medium-8 large-8 columns resource-info">
     <div class="resource-name">
       <h2><%= @resource.name %></h2>
-      <%= link_to 'Edit', edit_resource_path(@resource) %>
+      <% if current_user.role == "Teacher" %>
+        <%= link_to 'Edit', edit_resource_path(@resource) %>
+      <% end %>
     </div>
     <div class="resource-cohort">
       <h3><%= @resource.cohort.name %></h3>
