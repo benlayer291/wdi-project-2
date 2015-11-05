@@ -1,12 +1,15 @@
-<h1>Classes</h1>
+<div class="row">
+  <div class="small-12 medium-6 large-6 columns all-cohorts-title">
+    <h1>Classes</h1>
+    <%= link_to 'Add New Class', new_cohort_path %>
+  </div>
+</div>
+
 <% @ordered_cohorts = @cohorts.sort_by { |obj| obj.year_group } %>
 <% @ordered_cohorts.each do |cohort| %>
-<div class="small-12 medium-4 large-3 columns resource-tile">
-  <div class="resource-title">
-    <%= link_to cohort.name, cohort  %>
-  </div>
-  <div class="resource-time">
-
+<div class="small-12 medium-6 large-6 columns all-cohort-tile">
+  <div class="all-cohort-title">
+    <h2><%= link_to cohort.name, cohort %></h2>
     <%= link_to cohort.teacher.first_name + cohort.teacher.second_name, resources_path %>
   </div>
 </div>

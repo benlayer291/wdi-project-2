@@ -60,6 +60,32 @@
   }
 }
 
+//cohorts index
+
+.all-cohorts-title {
+  margin-top: $container-top;
+  h1 {
+    display: inline-block;
+    margin: 0;
+  }
+  a {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+.all-cohort-title {
+  margin-top: 20px;
+  h2 {
+    display:inline-block;
+    margin: 0;
+  }
+  a {
+    display:inline-block;
+    margin-left: 10px;
+  }
+}
+
 // edit cohorts
 .edit-container{
   margin-top: $container-top;
