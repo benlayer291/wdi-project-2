@@ -10,9 +10,7 @@
       <h2><%= current_user.first_name + " " + current_user.second_name %></h2>
     </div>
     <div class="profile-classes">
-      <ul>
-        <h4><%= current_user.role + ", " + "#{current_user.cohorts.map(&:name).join}" %></h4>
-      </ul>
+      <h4><%= current_user.role + ": " + "#{current_user.cohorts.map(&:name).join(", ")}" %></h4>
     </div>
   </div>
 </div>

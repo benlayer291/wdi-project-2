@@ -88,13 +88,8 @@
     }
 
     .profile-classes {
-      ul {
-        margin-left: 0;
-        li {
-          list-style-type: none;
-          display: inline-block;
-          margin-right: 10px;
-        }
+      h4 {
+        font-size: 20px;
       }
     }
   }
@@ -106,3 +101,57 @@
   }
 }
   
+// All-users page
+
+.all-users {
+  margin: 50px 0;
+  height: 200px;
+  overflow: hidden;
+
+  .teacher-pic {
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+      border-radius: 100%;
+      width: 200px;
+    }
+
+  }
+
+  .all-user-name {
+    margin: auto 0;
+
+    .cohort-name {
+
+      h1 {
+        display: inline-block;
+        margin: 0;
+      }
+
+      a {
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+    }
+
+    .all-user-info {
+      margin-top: 20px;
+      h4 {
+        display: inline-block;
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .all-users {
+    height: 150px;
+    margin: 50px 0 20px 0;
+    .teacher-pic {
+      display:none;
+    }
+  }
+}
