@@ -2,38 +2,81 @@
 // // They will automatically be included in application.css.
 // // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//Profile page
+
+.user-profile {
+  margin-top: $container-top;
+  text-align: center;
+
+  .user-pic {
+    img {
+      border-radius: 100%;
+      width: 300px;
+    }
+  }
+
+  .user-name {
+    h2 {
+      margin-top: 20px;
+    }
+  }
+
+  .user-role {
+    h3 {
+      margin-top: 20px;
+    }
+  }
+
+  .user-class {
+    margin-top: 10px;
+    ul {
+      margin: 0;
+      padding:0;
+
+      li {
+        list-style-type: none;
+        display: inline-block;
+      }
+    }
+  }
+
+  .user-email {
+    margin-top: 10px;
+  }
+
+  .user-options {
+    margin-top: 10px;
+  }
+}
+
+
+//Feed Page
+
 .user-info {
   margin: 50px 0;
   max-height: 200px;
   overflow: hidden;
-
   .profile-pic {
     text-align: center;
-
     img {
       border-radius: 100%;
       margin: 0 auto;
       // background-position: center;
       width: 200px;
     }
-
   }
 
   .profile-info {
     margin: auto 0;
-
     .profile-name {
-
       h2 {
         display: inline-block;
         margin: 0;
       }
-
       a {
         display: inline-block;
         margin-left: 10px;
       }
-
     }
 
     .profile-role {
@@ -44,35 +87,16 @@
     }
 
     .profile-classes {
-
       ul {
         margin-left: 0;
-
         li {
           list-style-type: none;
           display: inline-block;
           margin-right: 10px;
         }
-
       }
-
     }
-
   }
 
 }
-
-.user-resources {
-
-}
-
-@media only screen and (max-width: 640px) {
-
-  .profile-pic img {
-
-    // width:150px;
-  }
-
- }
-
   
