@@ -22,6 +22,7 @@
   </div>
 </div>
 
+<% if false %>
 <div class="user-resources">
   <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.year_group } %>
   <% @user_cohorts.each do |cohort| %>
@@ -45,3 +46,4 @@
     </div>
   <% end %>
 </div>
+<% end %>

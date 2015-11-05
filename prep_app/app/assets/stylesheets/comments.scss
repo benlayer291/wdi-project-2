@@ -1,18 +1,22 @@
 .comment {
   margin-top: 50px;
   height: 100px;
-  line-height: 100px;
-  .comments-image {
-    text-align: right;
+  .comment-container{
+    height: 100px;
+    .comments-image {
+      text-align: left;
+      padding: 0;
+    }
     .comment-image {
       border-radius: 100%;
       margin: 0 auto;
       // background-position: center;
       height: 100px;
     }
-    .comment-comment{
-      height: 100px;
-      // line-height: 100px;
+    .comment-comment {
+      padding-left: 0;
+      line-height: 20px;
+      vertical-align: middle;
     }
   }
 }
