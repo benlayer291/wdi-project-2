@@ -7,9 +7,13 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
+  def profile
+    redirect_to user_path(current_user)
+  end
+
   #Get
   def show
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   #Get

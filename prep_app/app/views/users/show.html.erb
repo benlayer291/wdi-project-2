@@ -1,21 +1,21 @@
 <div class="row user-profile">
   <div class="small-12 medium-12 large-6 large-offset-3">
     <div class="user-pic">
-      <%= image_tag current_user.image %>
+      <%= image_tag @user.image %>
     </div>
     <div class="user-name">
-      <h2><%= current_user.first_name + " " + current_user.second_name %></h2>
+      <h2><%= @user.first_name + " " + @user.second_name %></h2>
     </div>
     <div class="user-role">
-      <h3><%= current_user.role %></h3>
+      <h3><%= @user.role %></h3>
     </div>
     <div class="user-class">
       <div class="row">
         <ul>
-          <% @user_cohorts = current_user.cohorts.sort_by { |obj| obj.year_group } %>
+          <% @user_cohorts = @user.cohorts.sort_by { |obj| obj.year_group } %>
           <% @user_cohorts.each do |cohort| %>
             <!-- <div class="small-4 columns"> -->
-            <% if current_user.role == "Teacher" %>
+            <% if @user.role == "Teacher" %>
               <li><%= link_to cohort.name, cohort  %></li>
             <% else %>
               <li><%= cohort.name %></li>
@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="user-email">
-      <%= current_user.email %>
+      <%= @user.email %>
     </div>
     <div class="user-options">
       <%= link_to "Edit Profile", edit_user_registration_path  %>

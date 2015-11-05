@@ -1,5 +1,18 @@
 <h1>Classes</h1>
+<% @ordered_cohorts = @cohorts.sort_by { |obj| obj.year_group } %>
+<% @ordered_cohorts.each do |cohort| %>
+<div class="small-12 medium-4 large-3 columns resource-tile">
+  <div class="resource-title">
+    <%= link_to cohort.name, cohort  %>
+  </div>
+  <div class="resource-time">
 
+    <%= link_to cohort.teacher.first_name + cohort.teacher.second_name, resources_path %>
+  </div>
+</div>
+<% end %>
+
+<% if false %>
 <% @ordered_cohorts = @cohorts.sort_by { |obj| obj.year_group } %>
 <% @ordered_cohorts.each do |cohort| %>
   <ul>
@@ -10,5 +23,5 @@
 <ul>
   <li><%= link_to 'New Cohort', new_cohort_path %></li>
 </ul>
-
+<% end %>
 
