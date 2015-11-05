@@ -1,9 +1,105 @@
 // Place all the styles related to the cohorts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
- .cohort-info {
-    margin: $container-bottom;
-  h1 {
-    display: inline-block;
+// .cohort-info {
+//   margin: $container-top;
+//   .teacher-pic {
+//     text-align: center;
+//     img {
+//       border-radius: 100%;
+//       margin: 0 auto;
+//       width: 200px;
+//     }
+//   }
+//   .cohort-name {
+//     margin: 0;
+//     h1 {
+//       display: inline-block;
+//       margin:0;
+//     }
+//     a {
+//       margin:0;
+//       margin-left: 10px;
+//     }
+//   }
+
+//   .cohort-teacher {
+//     margin: 0;
+//     margin-top: 20px;
+//     h4 {
+//       margin: 0;
+//     }
+//   }
+
+//   .cohort-tools {
+//     margin-top: 20px;
+//     a {
+//       margin: 0;
+//     }
+//   }
+
+// }
+
+// @media screen and (max-width: 640px) {
+
+//   .teacher-pic {
+//     display:none;
+//   }
+// }
+
+.cohort-info {
+  margin: 50px 0;
+  height: 200px;
+  overflow: hidden;
+
+  .teacher-pic {
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+      border-radius: 100%;
+      width: 200px;
+    }
+
   }
- }
+
+  .cohort-desc {
+    margin: auto 0;
+
+    .cohort-name {
+
+      h1 {
+        display: inline-block;
+        margin: 0;
+      }
+
+      a {
+        display: inline-block;
+        margin-left: 10px;
+      }
+
+    }
+
+    .cohort-teacher {
+      margin-top: 20px;
+      h4 {
+        display: inline-block;
+        margin: 0;
+      }
+    }
+    .cohort-tools {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .cohort-info {
+    height: 150px;
+    margin: 50px 0 20px 0;
+    .teacher-pic {
+      display:none;
+    }
+  }
+}
+
