@@ -69,3 +69,12 @@
     }
   }
 }
+
+@media screen and (max-width: 640px) {
+  .resource {
+    height: 250px;
+    .resource-pic {
+      display:none;
+    }
+  }
+}

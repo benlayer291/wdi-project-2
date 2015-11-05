@@ -1,16 +1,15 @@
 <div class="row comment">
   <!-- <li><%= comment.title %></li> -->
-  <div class="large-7 columns  large-offset-4 comment-container">
-  <div class="large-4 columns comments-image">
+  <div class="small-12 medium-12 large-8 columns large-offset-4 comment-container">
+  <div class="small-4 medium-4 large-3 columns comments-image">
     <%= link_to user_path do %>
       <%= image_tag comment.user.try(:image), class: "comment-image" %>
     <% end %>
   </div>
-  <div class="large-8 columns comment-comment">
+  <div class="small-8 medium-6 large-7 columns comment-comment">
     <%= comment.comment %>
   </div>
-  </div>
-  <div class="large-1 columns comment-delete">
-    <%= link_to 'Delete', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <div class="small-12 medium-2 large-2 columns comment-delete">
+    <p><%= link_to 'Delete', comment_path(comment, commentable_type: commentable.class.to_s.underscore, commentable_id: commentable.id), method: :delete, data: { confirm: 'Are you sure?' } %></p>
   </div>
 </div>
