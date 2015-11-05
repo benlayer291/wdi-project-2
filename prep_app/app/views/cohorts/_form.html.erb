@@ -1,28 +1,28 @@
 <%= form_for(@cohort) do |f| %>
 
-  <% if @cohort.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@cohort.errors.count, "error") %> prohibited this post from being saved:</h2>
+<% if @cohort.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@cohort.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
+    <ul>
       <% @cohort.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
+    </ul>
+  </div>
+<% end %>
 
-  <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name, autofocus: true %>
-    </div>
+<div class="field">
+  <%= f.label :name %><br />
+  <%= f.text_field :name, autofocus: true %>
+</div>
 
-    <div class="field">
-      <%= f.label :teacher_id %><br />
-      <%= f.collection_select(:teacher_id, User.where(role: "Teacher"), :id, :second_name) %>
-    </div>
+<div class="field">
+  <%= f.label :teacher_id %><br />
+  <%= f.collection_select(:teacher_id, User.where(role: "Teacher"), :id, :second_name) %>
+</div>
 
-    <div class="actions">
-      <%= f.submit "Submit", class: "button expand" %>
-    </div>
+<div class="actions">
+  <%= f.submit "Submit", class: "button expand" %>
+</div>
 <% end %>

@@ -10,21 +10,9 @@
 <div class="small-12 medium-6 large-6 columns all-cohort-tile">
   <div class="all-cohort-title">
     <h2><%= link_to cohort.name, cohort %></h2>
-    <%= link_to cohort.teacher.first_name + cohort.teacher.second_name, resources_path %>
+    <%= cohort.teacher.first_name + cohort.teacher.second_name %>
   </div>
 </div>
 <% end %>
 
-<% if false %>
-<% @ordered_cohorts = @cohorts.sort_by { |obj| obj.year_group } %>
-<% @ordered_cohorts.each do |cohort| %>
-  <ul>
-    <li><%= link_to cohort.name, cohort  %></li>
-  </ul>
-<% end %>
-
-<ul>
-  <li><%= link_to 'New Cohort', new_cohort_path %></li>
-</ul>
-<% end %>
 

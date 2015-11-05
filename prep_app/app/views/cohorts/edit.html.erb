@@ -1,4 +1,5 @@
 <div class="edit-container">
+
   <div class="edit-title">
     <h1><%= "Edit " + @cohort.name %></h1>
     <%= link_to 'Delete', @cohort, method: :delete, data: { confirm: 'Are you sure?' } %>
@@ -9,4 +10,5 @@
   <div class="edit-tools">
     <%= link_to 'Back', cohorts_path %>
   </div>
+  
 </div>

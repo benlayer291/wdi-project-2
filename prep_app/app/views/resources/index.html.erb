@@ -12,6 +12,11 @@
     <div class="profile-classes">
       <h4><%= current_user.role + ": " + "#{current_user.cohorts.map(&:name).join(", ")}" %></h4>
     </div>
+    <% if current_user == "Teacher" %>
+    <div class="cohort-tools">
+          <%= link_to 'Add New Resource', new_resource_path %>
+    </div>
+    <% end %>
   </div>
 </div>
 
