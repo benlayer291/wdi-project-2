@@ -13,9 +13,7 @@
   <div class="small-12 medium-8 large-8 columns user-desc">
     <div class="all-user-name">
       <h1><%= user.first_name + " " + user.second_name %></h1>
-      <% if user.role == "Student" %>
-        <%= link_to 'Edit User', edit_user_path(user) %>
-      <% end %>
+      <%= link_to 'Edit User', edit_user_path(user) %>
     </div>
     <div class="all-user-role">
       <h4><%= user.role %></h4>
