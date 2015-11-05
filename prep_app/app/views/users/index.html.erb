@@ -1,4 +1,7 @@
-<h1>Users</h1>
+<div class="all-title">
+  <h1>Users</h1>
+</div>
+
 <% @ordered_users = @users.sort_by { |obj| obj.second_name } %>
 <% @ordered_users.each do |user| %>
 <div class="row all-users">

@@ -1,8 +1,12 @@
-<h1>Edit<%= " " + @cohort.name %></h1>
+<div class="edit-container">
+  <div class="edit-title">
+    <h1><%= "Edit " + @cohort.name %></h1>
+    <%= link_to 'Delete', @cohort, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<ul>
-  <li><%= link_to 'Back', cohorts_path %></li>
-  <li><%= link_to 'Delete', @cohort, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-</ul>
+  <div class="edit-tools">
+    <%= link_to 'Back', cohorts_path %>
+  </div>
+</div>

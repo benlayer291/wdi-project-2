@@ -4,8 +4,7 @@ class Ability
   def initialize(user)  
         can :manage, :all if user.role == "Teacher"
       else 
-        can :show, User
-        can :edit, User
+        can :manage, User
         can :read, Cohort
         can :read, Resource
       end
