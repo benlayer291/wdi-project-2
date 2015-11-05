@@ -98,6 +98,11 @@
       }
     }
   }
+}
 
+@media screen and (max-width: 640px) {
+  .user-class li {
+    font-size: 14px;
+  }
 }
   
