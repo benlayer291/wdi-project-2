@@ -1,9 +1,13 @@
 
 <div class="small-6 medium-6 large-4 columns resource-tile">
+  <div class="resource-title">
+    <%= resource.name + " - " + time_ago_in_words(resource.created_at) + " ago" %>
+  </div>
+  <div class="resource-image">
   <%= link_to resource do %>
     <%= image_tag resource.file.thumb.url %>
   <% end %>
-  <%= time_ago_in_words(resource.created_at) %>
+  </div>
 </div>
 
 
