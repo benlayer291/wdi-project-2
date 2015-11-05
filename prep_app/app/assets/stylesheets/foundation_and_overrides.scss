@@ -114,10 +114,10 @@ $font-weight-normal: 300;
 // $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
-$dark_blue: #607D8B;
+
 
 // We use these as default colors throughout
-$primary-color: #FF9300; // $dark_blue; // #008CBA;
+$primary-color: $orange; // $dark_blue; // #008CBA;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -126,7 +126,7 @@ $primary-color: #FF9300; // $dark_blue; // #008CBA;
 
 // We use these to control various global styles
 // $body-bg: $white;
-// $body-font-color: $jet;
+$body-font-color: $dark_grey;//$jet;
 // $body-font-family: $font-family-sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
@@ -141,7 +141,7 @@ $primary-color: #FF9300; // $dark_blue; // #008CBA;
 // $last-child-float: $opposite-direction;
 
 // We use these to make sure border radius matches unless we want it different.
-// $global-radius: 3px;
+$global-radius: 5px;//3px;
 // $global-rounded: 1000px;
 
 // We use these to control inset shadow shiny edges and depressions.
@@ -214,7 +214,7 @@ $primary-color: #FF9300; // $dark_blue; // #008CBA;
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
-// $header-font-color: $jet;
+$header-font-color: $dark_grey; //$jet;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;

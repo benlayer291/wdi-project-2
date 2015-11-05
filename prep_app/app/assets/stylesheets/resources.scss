@@ -1,12 +1,27 @@
 .resource-title {
-  text-align: center;
-}
-.resource-image {
-  text-align: center;
+  display: inline-block;
+  font-size: 18px;
+  color: #424242;
 }
 
 .resource-time {
-  text-align: right;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 5px;
+  color: #424242;
+}
+
+
+.resource-pic {
+  text-align: center;
+  margin-top: 20px;
+
+  img {
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 300px;
+  }
+
 }
 
 .resource {
@@ -19,7 +34,7 @@
 
     img {
       margin: 0 auto;
-      background-position: center;
+      border-radius: 5px;
       width: 200px;
     }
 
@@ -43,10 +58,14 @@
     }
 
     .resource-cohort {
+      margin-top: 20px;
       h3 {
         display: inline-block;
         margin: 0;
       }
+    }
+    .resource-description {
+      margin-top: 20px;
     }
   }
 }
