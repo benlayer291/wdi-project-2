@@ -1,10 +1,9 @@
 <header>
   <nav class="top-bar" data-topbar role="navigation">
     <ul class="title-area">
-<!--       <li><%= image_tag "prep.png" %><li> -->
       <li class="name">
         <%= link_to root_path do %>
-          <%= image_tag "prep-full-1.png" %>
+        <%= image_tag "prep-full-1.png" %>
         <% end %>
       </li>
       <li class="toggle-topbar menu-icon"><a href="#"><span><span></a></li>
@@ -12,19 +11,18 @@
     <section class="top-bar-section">
       <ul class="right">
         <% if current_user %>
-          <li><%= link_to "My Profile", root_path %></li>
-          <% if current_user.role == "Student" %>
-            <li><%= link_to "Feed", resources_path %></li>
-          <% else %>
-            <li class="has-dropdown">
-              <a href="#">My Classes</a>
-            <ul class="dropdown">
-              <% @user_cohorts = current_user.cohorts.sort_by { |obj| obj.year_group } %>
-              <% @user_cohorts.each do |cohort| %>
-                <li><%= link_to cohort.name, cohort  %></li>
-              <% end %>
-            </ul>
-          </div>
+        <li><%= link_to "My Profile", root_path %></li>
+        <% if current_user.role == "Student" %>
+        <li><%= link_to "Feed", resources_path %></li>
+        <% else %>
+        <li class="has-dropdown">
+          <a href="#">My Classes</a>
+          <ul class="dropdown">
+            <% @user_cohorts = current_user.cohorts.sort_by { |obj| obj.year_group } %>
+            <% @user_cohorts.each do |cohort| %>
+            <li><%= link_to cohort.name, cohort  %></li>
+            <% end %>
+          </ul>
           <li class="has-dropdown">
             <%= link_to "Browse" %>
             <ul class="dropdown">
@@ -35,14 +33,11 @@
           </li>
           <% end %>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-        <% else %>
+          <% else %>
           <li><%= link_to "Register", new_user_registration_path %></li>
           <li><%= link_to "Login", new_user_session_path %></li>
-        <% end %>
-      </ul> 
-      <!-- <ul class="left">
-            <li><h1><%= link_to "PREP", root_path %></h1></li>
-          </ul>   -->   
-    </section>
-  </nav>
-</header>
+          <% end %>
+        </ul>   
+      </section>
+    </nav>
+  </header>
