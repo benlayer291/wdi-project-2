@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources  :comments, only: [:create, :destroy]
 
   authenticated :user do
-    root "users#profile", as: :authenticated_root
+    root "resources#index", as: :authenticated_root
   end
 
   devise_scope :user do

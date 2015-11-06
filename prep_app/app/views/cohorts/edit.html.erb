@@ -1,14 +1,14 @@
-<div class="edit-container">
+<div class="small-10 medium-8 large-6 large-offset-3 medium-offset-2 small-offset-1 columns">
+  <div class="edit-container">
+    <div class="edit-title">
+      <h1><%= "Edit " + @cohort.name %></h1>
+      <%= link_to 'Delete', @cohort, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
 
-  <div class="edit-title">
-    <h1><%= "Edit " + @cohort.name %></h1>
-    <%= link_to 'Delete', @cohort, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%= render 'form' %>
+
+    <div class="edit-tools">
+      <%= link_to 'Back', cohorts_path %>
+    </div>
   </div>
-
-  <%= render 'form' %>
-
-  <div class="edit-tools">
-    <%= link_to 'Back', cohorts_path %>
-  </div>
-  
 </div>

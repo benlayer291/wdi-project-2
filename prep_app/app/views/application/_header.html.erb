@@ -11,7 +11,7 @@
     <section class="top-bar-section">
       <ul class="right">
         <% if current_user %>
-        <li><%= link_to "My Profile", root_path %></li>
+        <li><%= link_to "My Profile", current_user %></li>
         <% if current_user.role == "Student" %>
         <li><%= link_to "Feed", resources_path %></li>
         <% else %>
