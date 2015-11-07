@@ -107,7 +107,7 @@ def cover
   end
 ```
 
-It also took some time to getting used to using SCSS within the Foundation framework.
+It also took some time to getting used to using SCSS within the Foundation framework. SCSS turned out to be excellent and real boost to my HTML and styling.
 
 ## Developments
 
