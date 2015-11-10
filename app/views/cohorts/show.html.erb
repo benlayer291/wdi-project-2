@@ -1,6 +1,6 @@
 <div class="row cohort-info">
   <div class="small-0 medium-4 large-4 columns teacher-pic">
-    <%= image_tag @cohort.teacher.image %>
+    <%= image_tag @cohort.teacher.try(:image) %>
   </div>
   <div class="small-12 medium-8 large-8 columns cohort-desc">
     <div class="cohort-name">
@@ -8,7 +8,7 @@
       <%= link_to 'Edit Class', edit_cohort_path(@cohort) %>
     </div>
     <div class="cohort-teacher">
-      <h4><%= "Teacher: " + @cohort.teacher.first_name + " " + @cohort.teacher.second_name %></h4>
+      <h4><%= "Teacher: " + @cohort.teacher.try(:first_name) + " " + @cohort.teacher.try(:second_name) %></h4>
     </div>
     <div class="cohort-tools">
       <%= link_to 'Add New Resource', new_resource_path %>
@@ -16,38 +16,6 @@
   </div>
 </div>
 
-
-<!-- <div class="row cohort-info">
-  <div class="small-0 medium-4 large-4 columns teacher-pic">
-    <%= image_tag @cohort.teacher.image %>
-  </div>
-  <div class="small-12 medium-8 large-8 columns cohort-desc">
-    <div class="cohort-name">
-      <h1><%= @cohort.name %></h1>
-      <%= link_to 'Edit Class', edit_cohort_path(@cohort) %>
-    </div>
-    <div class="cohort-teacher">
-        <h4><%= "Teacher: " + @cohort.teacher.first_name + " " + @cohort.teacher.second_name %></h4>
-    </div>
-    <div class="cohort-tools">
-      <%= link_to 'Add New Resource', new_resource_path %>
-    </div>
-  </div>
-</div> -->
-
 <div class="cohort-resources">
   <%= render @cohort.resources %>
 </div>
-
-<!-- <div class="cohort-info">
-  <h1><%= @cohort.name %></h1>
-  <%= "Teacher: " + @cohort.teacher.first_name + " " + @cohort.teacher.second_name %>
-</div>
-<div class="cohort-tools">
-  <%= link_to 'Edit Class', edit_cohort_path(@cohort) %>
-  <%= link_to 'Add New Resource', new_resource_path %>
-</div>
-<div class="cohort-resources">
-  <%= render @cohort.resources %>
-</div>
- -->
