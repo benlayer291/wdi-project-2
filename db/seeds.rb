@@ -8,6 +8,14 @@
 
 # User(id: integer, email: string, first_name: string, second_name: string, image: string, role: string, cohort_id: integer)
 
+User.destroy_all
+Cohort.destroy_all
+Resource.destroy_all
+
+u1 = User.create!(email: "ben@ben.com", first_name: "Ben", second_name: "Layer", image: "https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/s320x320/e35/11939569_1500752530245311_1771181205_n.jpg", role: "Teacher", password: "password")
+
+u2 = User.create!(email: "georgina@georgina.com", first_name: "Georgina", second_name: "Eklof", image: "https://scontent.cdninstagram.com/hphotos-xap1/t51.2885-15/s320x320/e35/12106197_1619965444920709_1341174985_n.jpg", role: "Student", password: "password")
+
 #currently by registering...
 
 #  Cohort(id: integer, name: string, teacher_id: integer, created_at: datetime, updated_at: datetime, year_group: integer)
@@ -40,14 +48,14 @@ r16 = c4.resources.create!(name: 'Homework 16', description: 'Complete all quest
 r17 = c5.resources.create!(name: 'Homework 17', description: 'Complete all questions on the worksheet. Write your name and the date at the top of the page. You will need to draw a graph for question 3 which you should do using a pencil and ruler on graph paper', image: 'http://www.stmarysrcmidd.rochdale.sch.uk/files/images/keep-calm-and-do-that-homework.png', file: File.open(Rails.root + "app/assets/resources/ExampleHomework4.pdf"))
 r18 = c6.resources.create!(name: 'Homework 18', description: 'Complete all questions on the worksheet. Write your name and the date at the top of the page. You will need to draw a graph for question 3 which you should do using a pencil and ruler on graph paper', image: 'http://www.stmarysrcmidd.rochdale.sch.uk/files/images/keep-calm-and-do-that-homework.png', file: File.open(Rails.root + "app/assets/resources/ExampleHomework5.pdf"))
 
-#Setup user cohorts
-User.find(2).cohorts << c1
-User.find(1).cohorts << c1 
-User.find(1).cohorts << c2 
-User.find(1).cohorts << c3 
-User.find(1).cohorts << c4 
-User.find(1).cohorts << c5 
-User.find(1).cohorts << c6 
+# Setup user cohorts
+u2.cohorts << c1
+u1.cohorts << c1 
+u1.cohorts << c2 
+u1.cohorts << c3 
+u1.cohorts << c4 
+u1.cohorts << c5 
+u1.cohorts << c6 
 
 
 
